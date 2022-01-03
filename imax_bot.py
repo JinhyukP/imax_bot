@@ -37,9 +37,7 @@ def movie_alarm_telegram(areacode='01', theatercode='0013', date='20220101', che
         for movie in movie_dict.keys():
             movie_open_check_condition1 = (check_title == movie)
             if True in {movie_open_check_condition1}:
-                bot.sendMessage(chat_id=chat_id, text = f"{movie}의 {movie_dict[movie]}예매가 오픈되었습니다.")                
-#                 for chat_id in chat_ids:
-#                     bot.sendMessage(chat_id=chat_id, text = f"{movie}의 {movie_dict[movie]}예매가 오픈되었습니다.")
+                bot.sendMessage(chat_id=chat_id, text = f"{movie}의 {movie_dict[movie]}예매가 오픈되었습니다.")           
     else:
 #         bot.sendMessage(chat_id=chat_id, text = "아직 오픈된 예매가 없습니다.")
         print(datetime.datetime.now().strftime("%Y-%m-%d | %H:%M:%S"), "아직 오픈된 예매가 없습니다.")
@@ -50,11 +48,3 @@ if __name__ == "__main__":
 sc = BlockingScheduler()
 sc.add_job(movie_alarm_telegram, 'interval', seconds = 30)
 sc.start()    
-
-
-
-'''
-[ref] https://somjang.tistory.com/entry/Python-파이썬과-텔레그램으로-스파이더맨-노웨이홈-예매-알리미-만드는-방법 [솜씨좋은장씨]
-'''
-
-
