@@ -3,10 +3,14 @@ Send a notification message via telegram when IMAX movie ticket reservation beco
 
 ## Make a telegram bot using "BotFather" in telegram.
 In dialogue with BotFather, type
+
   /start
+  
   /newbot
+  
   (choose a name for the bot: "blah_blah_bot")
- - Then the token is given.
+  
+ Then the token is given.
  
  ## Get chat_id from the token
  1. Go to https://api.telegram.org/bot[Your_Token_BLAHBLAH1234567890]/getUpdates
